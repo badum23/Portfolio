@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <script src="./libs/vue.js"></script>
+      <title>Авторизация</title>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <header>
+         <div class="container relative intr">
+            <div class="header">
+               <nav>
+                  <!-- лого -->
+                  <a class="logo" href="index.html">
+                  <img src="/src/images/logo.png" alt="">
+                  </a>
+                  <!-- /лого -->
+               </nav>
+               <ul class="nav-links">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="profile.html">Форум</a></li>
+                  <li><a href="donat.html">Пополнение счета</a></li>
+               </ul>
+               <div class="header__buttons">
+                  <a href="auth.html" class="header__btn">Авторизация</a>
+               </div>
+               <div class="burger" onclick="toggleMenu()">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+               </div>
+               <div class="menu-background"></div>
+               <div class="menu-overlay">
+                  <ul class="mobile-nav-links">
+                     <li><a href="index.html">Главная</a></li>
+                     <li><a href="profile.html">Форум</a></li>
+                     <li><a href="donat.html">Пополнение счета</a></li>
+                     <li><a href="auth.html">Авторизация</a></li>
+                  </ul>
+                  <div class="mob__socials">
+                     <a href="#">
+                        <div class="mob__social">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="42" height="27" viewBox="0 0 42 27" fill="none">
+                              <path opacity="0.3" d="M22.5834 26.3715C8.4169 26.3715 0.336681 16.4941 0 0.0581055L7.0962 0.0581055C7.32929 12.1217 12.5607 17.2316 16.7044 18.2852L16.7044 0.0581055L23.3865 0.0581055L23.3865 10.4623C27.4785 10.0145 31.7771 5.27338 33.2274 0.0581055L39.9094 0.0581055C38.7958 6.485 34.134 11.2262 30.819 13.1753C34.134 14.7557 39.4435 18.891 41.4636 26.3715H34.1081C32.5283 21.367 28.5921 17.495 23.3865 16.9682L23.3865 26.3715H22.5834Z" fill="white"/>
+                           </svg>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="mob__social">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="43" height="29" viewBox="0 0 43 29" fill="none">
+                              <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M4.73915 27.5087C3.99788 27.2894 3.32152 26.8992 2.76714 26.3712C2.21277 25.8431 1.79666 25.1926 1.55391 24.4745C0.166784 20.7633 -0.244217 5.26659 2.42728 2.20736C3.3164 1.21218 4.57173 0.599463 5.92078 0.502218C13.0876 -0.250052 35.2302 -0.149748 37.7733 0.752975C38.4885 0.979499 39.142 1.3611 39.6847 1.86919C40.2275 2.37728 40.6454 2.99868 40.9071 3.68683C42.4227 7.5234 42.4741 21.4655 40.7016 25.1516C40.2315 26.1111 39.4443 26.8883 38.4668 27.3582C35.7953 28.6622 8.28403 28.6371 4.73915 27.5087ZM16.1187 20.2368L28.9624 13.7171L16.1187 7.14726L16.1187 20.2368Z" fill="white"/>
+                           </svg>
+                        </div>
+                     </a>
+                     <a href="#">
+                        <div class="mob__social">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="27" viewBox="0 0 40 27" fill="none">
+                              <path opacity="0.3" d="M34.4324 3.67875C31.7313 1.58505 28.49 0.538255 25.0686 0.36377L24.5283 0.887226C27.5895 1.58505 30.2908 2.98081 32.8117 4.90003C29.7505 3.32978 26.329 2.28299 22.7275 1.93402C21.6471 1.75953 20.7467 1.75953 19.6663 1.75953C18.5859 1.75953 17.6854 1.75953 16.605 1.93402C13.0035 2.28299 9.58204 3.32978 6.52078 4.90003C9.04178 2.98081 11.743 1.58505 14.8042 0.887226L14.264 0.36377C10.8425 0.538255 7.60119 1.58505 4.90011 3.67875C1.83884 9.26193 0.218162 15.5429 0.0380859 21.9983C2.73917 24.7899 6.52078 26.5347 10.4825 26.5347C10.4825 26.5347 11.743 25.1389 12.6433 23.9175C10.3024 23.3942 8.14146 22.1728 6.70087 20.2537C7.96137 20.9515 9.22186 21.6494 10.4825 22.1728C12.1032 22.8707 13.7238 23.2197 15.3445 23.5687C16.7851 23.743 18.2257 23.9175 19.6663 23.9175C21.1068 23.9175 22.5474 23.743 23.988 23.5687C25.6087 23.2197 27.2294 22.8707 28.85 22.1728C30.1107 21.6494 31.3712 20.9515 32.6317 20.2537C31.1911 22.1728 29.0301 23.3942 26.6892 23.9175C27.5895 25.1389 28.85 26.5347 28.85 26.5347C32.8117 26.5347 36.5934 24.7899 39.2944 21.9983C39.1144 15.5429 37.4937 9.26193 34.4324 3.67875ZM13.7238 18.8578C11.9231 18.8578 10.3024 17.2875 10.3024 15.3684C10.3024 13.4492 11.9231 11.879 13.7238 11.879C15.5246 11.879 17.1453 13.4492 17.1453 15.3684C17.1453 17.2875 15.5246 18.8578 13.7238 18.8578ZM25.6087 18.8578C23.8079 18.8578 22.1873 17.2875 22.1873 15.3684C22.1873 13.4492 23.8079 11.879 25.6087 11.879C27.4095 11.879 29.0301 13.4492 29.0301 15.3684C29.0301 17.2875 27.4095 18.8578 25.6087 18.8578Z" fill="white"/>
+                           </svg>
+                        </div>
+                        </a
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="section donat1">
+      <div class="vector__container">
+      <svg class="vector don" xmlns="http://www.w3.org/2000/svg" width="723" height="1080" viewBox="0 0 723 1080" fill="none">
+      <path d="M576.59 470.488L722.927 1202.09L473.236 1268.99L319.445 888.223L432.667 1279.86L427.837 1281.15L0.713325 -44.3652L154.542 305.635L48.7283 -58.3561L448.622 -165.507L448.997 -164.107L495.957 65.2422L431.033 -159.669L554.386 551.831L576.59 470.488Z" fill="black" fill-opacity="0.7"/>
+      </svg>
+      <!-- <svg class="vector1" xmlns="http://www.w3.org/2000/svg" width="207" height="553" viewBox="0 0 207 553" fill="none">
+         <path d="M21.046 0.141824L206.23 552.165L0.272946 57.8453L21.046 0.141824Z" fill="black" fill-opacity="0.7"/>
+         </svg>
+         <svg class="vector2" xmlns="http://www.w3.org/2000/svg" width="110" height="269" viewBox="0 0 110 269" fill="none">
+         <path d="M0.506944 0.261614L109.748 344.204L58.5597 305.783L0.506944 0.261614Z" fill="black" fill-opacity="0.7"/>
+         </svg>
+         <svg class="vector3" xmlns="http://www.w3.org/2000/svg" width="169" height="569" viewBox="0 0 169 569" fill="none">
+         <path d="M123.348 686.686L168.747 674.521L0.482466 0.18628L123.348 686.686Z" fill="black" fill-opacity="0.7"/>
+         </svg> -->
+      </div>
+      <div class="container relative">
+      <div class="form__container donat">
+      <h3 class="primary">Пополнение счета</h3>
+      <form class="form123 prof" action="/login" method="post">
+      <div>
+      <label class="log" for="username">ИГРОВОЙ ЛОГИН</label>
+      <input  type="text" placeholder="Введите игровой логин..." id="username" name="username">
+      </div>
+      <div>
+      <label class="sum" for="password">СУММА ПОПОЛНЕНИЯ</label>
+      <input type="password" placeholder="Введите сумму..." id="password" name="password">
+      </div>
+      <div>
+      <input class="btn__white" type="submit" value="ПЕРЕЙТИ К ОПЛАТЕ">
+      </div>
+      </form>
+      <div class="polit">Продолжая покупку, вы соглашаетесь
+      c <a href="#">пользовательским соглашением</a><br>
+      и <a href="#">политикой конфиденциальности</a></div>
+      </div>
+      </div>
+      <!-- /HEADER -->
+      <!-- ИНТРО -->
+      <script src="main.js"></script>
+      <script src="index.js"></script>
+   </body>
+</html>
